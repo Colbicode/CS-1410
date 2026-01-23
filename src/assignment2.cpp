@@ -2,8 +2,10 @@
 #include <iomanip>
 using namespace std;
 
+// Multiples of 3 Analysis Program
 int main() {
 
+    // Variable declarations
     int n;
     int count;
     int minimum;
@@ -11,8 +13,9 @@ int main() {
     int total = 0;
     double average;
     
-    // User input and value updates
+
     for (int i = 1; i <= 5; i++) {
+        // Input validation loop
         do {
             cout << "---------------------------------------------------" << endl;
             cout << "Enter a positive integer that is a multiple of 3: ";
@@ -23,12 +26,13 @@ int main() {
             }
         } while (!(n > 0 && n % 3 == 0));
 
-        // Initialize maximum and minimum variables
+        // Initialize maximum and minimum variables (first iteration)
         if (i == 1) {
             maximum = n;
             minimum = n;
         }
 
+        // Confirm valid input and update statistics
         cout << "Good Job!" << endl;
         if (n < minimum) {
             minimum = n;
