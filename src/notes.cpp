@@ -1,12 +1,17 @@
+#include <fstream>
 #include <iostream>
-#include <iomanip>
+
 using namespace std;
 
 int main() {
 
-    int intvar = 333;
-    int* intptr;
-    cout << *intptr;
-    
+    ifstream in("notes.txt");
+    int n, m;
+    while (in >> n >> m) {
+        cout << n << " + " << m << " = " << n + m << endl;
+    }
+
+    in.close();
+
     return 0;
 }
